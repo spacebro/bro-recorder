@@ -8,7 +8,7 @@ const overwrite = settings.get('record:overwrite') || false
 
 const folder = settings.get('record:folder') || './library'
 let filename = settings.get('record:filename') || 'spacebro-record'
-overwrite && (filename += `-${Date.now()}`)
+!overwrite && (filename += `-${Date.now()}`)
 const filepath = `${folder}/${filename}.json`
 
 const start = Date.now()

@@ -1,0 +1,17 @@
+{
+  "verbose": true,
+  "record": {
+    "events": ["*"],
+    "folder": "./library",
+    "filename": "bro-recorder",
+    "overwrite": false
+  },
+  "play": {
+    "filepath": "./library/bro-recorder.json"
+  },
+  "spacebro": {
+    "host": "127.0.0.1",
+    "port": 8888,
+    "channelName": "bro-record"
+  }
+}

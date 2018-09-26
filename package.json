@@ -1,0 +1,16 @@
+{
+  "name": "bro-recorder",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "record": "node record.js",
+    "play": "node play.js"
+  },
+  "keywords": [],
+  "author": "hugohil",
+  "license": "MIT",
+  "dependencies": {
+    "spacebro-client": "^0.4.7",
+    "standard-settings": "^1.1.15"
+  }
+}

@@ -7,7 +7,8 @@
     "overwrite": false
   },
   "play": {
-    "filepath": "./library/bro-recorder.json"
+    "filepath": "./library/bro-recorder.json",
+    "loop": false
   },
   "spacebro": {
     "host": "127.0.0.1",

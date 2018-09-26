@@ -6,6 +6,8 @@ const fs = require('fs')
 const settings = require('standard-settings')
 const { SpacebroClient } = require('spacebro-client')
 
+const loop = settings.get('play:loop') || false
+
 const filepath = settings.get('play:filepath') || './library/spacebro-record.json'
 const file = fs.readFileSync(filepath, {encoding: 'utf-8'})
 const datas = JSON.parse(file)
@@ -36,6 +38,9 @@ client.connect(host, port).then(() => {
       if (index < (events.length - 1)) {
         index++
         emit(event.time)
+      } else if (loop) {
+        index = 0
+        emit(0)
       } else {
         console.log('Done.')
         process.exit()

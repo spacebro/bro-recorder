@@ -51,7 +51,8 @@ $ node play.js
     // so you can keep versions of your recording. if not, bro-recorder will simply overwrite the file.
   },
   "play": {
-    "filepath": "./library/bro-recorder.json" // path to the recording file
+    "filepath": "./library/bro-recorder.json", // path to the recording file
+    "loop": false // wether to loop the record or not
   },
   "spacebro": {
     "host": "127.0.0.1", // host of your spacebro server

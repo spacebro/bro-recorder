@@ -1,5 +1,7 @@
 'use strict'
 
+const start = Date.now()
+
 const fs = require('fs')
 const settings = require('standard-settings')
 const { SpacebroClient } = require('spacebro-client')
@@ -11,7 +13,6 @@ let filename = settings.get('record:filename') || 'spacebro-record'
 !overwrite && (filename += `-${Date.now()}`)
 const filepath = `${folder}/${filename}.json`
 
-const start = Date.now()
 const file = fs.createWriteStream(filepath)
 file.write(`[${start}`)
 

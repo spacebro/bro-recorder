@@ -13,7 +13,7 @@ const filepath = `${folder}/${filename}.json`
 
 const start = Date.now()
 const file = fs.createWriteStream(filepath)
-file.write(`{"start": ${start}`)
+file.write(`[${start}`)
 
 let events = settings.get('record:events') || ['*']
 (!Array.isArray(events)) && (events = [events])
@@ -42,7 +42,7 @@ for (let i = 0; i < events.length; i++) {
 }
 
 process.on('SIGINT', () => {
-  file.write('}')
+  file.write(']')
   file.end()
   console.log(`\nfile written to ${filepath}`)
   process.exit()

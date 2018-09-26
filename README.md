@@ -19,7 +19,7 @@ $ cp settings/settings.default.js settings/settings.js
 $ vim settings/settings.js
 ```
 
-#### Run
+### Run
 
 ##### Record
 

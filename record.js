@@ -42,9 +42,13 @@ for (let i = 0; i < events.length; i++) {
   })
 }
 
-process.on('SIGINT', () => {
+client.on('bro-recorder-stop', quit)
+process.on('SIGINT', quit)
+process.on('SIGTERM', quit)
+
+function quit () {
   file.write(']')
   file.end()
   console.log(`\nfile written to ${filepath}`)
   process.exit()
-})
+}

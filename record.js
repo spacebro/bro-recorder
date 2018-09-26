@@ -34,9 +34,9 @@ console.log(`writing to ${filepath}`)
 for (let i = 0; i < events.length; i++) {
   const event = events[i]
   client.on(event, (datas) => {
-    const time = Date.now()
+    const time = (Date.now() - start)
     file.write(',')
-    const eventDatas = { event, datas, time: (time - start) }
+    const eventDatas = { event, datas, time }
     file.write(JSON.stringify(eventDatas))
   })
 }

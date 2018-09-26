@@ -23,7 +23,6 @@ $ vim settings/settings.js
 
 ```js
 {
-{
   "verbose": false, // does bro-rercorder logs everything or not
   "record": {
     "events": ["*"],

@@ -1,6 +1,6 @@
 # bro-rercorder
 
-Utility for recording and play back a series of spacebro events.
+Utility for recording and playback a serie of spacebro events.
 
 ### Usage
 
@@ -17,6 +17,22 @@ $ npm i
 ```sh
 $ cp settings/settings.default.js settings/settings.js
 $ vim settings/settings.js
+```
+
+#### Run
+
+##### Record
+
+Stop recording by `ctrl+c`, `SIGTERM`, or by sending a `bro-recorder-stop` event to the channel.
+
+```sh
+$ node record.js
+```
+
+##### Plaback
+
+```sh
+$ node play.js
 ```
 
 ### Settings

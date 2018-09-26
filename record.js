@@ -47,6 +47,7 @@ process.on('SIGINT', quit)
 process.on('SIGTERM', quit)
 
 function quit () {
+  client.disconnect()
   file.write(']')
   file.end()
   console.log(`\nfile written to ${filepath}`)

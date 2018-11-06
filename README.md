@@ -35,6 +35,12 @@ $ node record.js
 $ node play.js
 ```
 
+You can override the `settings.json` file with CLI args like so:
+
+```sh
+$ node play.js --play.filepath /path/to/my/file.json
+```
+
 ### Settings
 
 ```js
